@@ -1,6 +1,5 @@
-git init
-git add query.sql
-git commit -m "Add SQL query to filter IT employees"
-git branch -M main
-git remote add origin https://github.com/yourusername/yourrepository.git
-git push -u origin main
+SELECT employee_id, name, department, salary, hire_date
+FROM employees
+WHERE department = 'IT' AND hire_date > '2020-01-01'
+ORDER BY salary DESC;
+
